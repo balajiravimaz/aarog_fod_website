@@ -1,0 +1,138 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,*::before, *::after{
+    box-sizing: inherit;    
+}
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 200vh;
+    overflow-x: hidden;
+    background: #f9f9f9;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+    &.active{
+        overflow: hidden;
+    }
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.title{
+    font-family: $fonts;
+    text-align: center;
+    font-size: $large;
+    margin-bottom: 40px;
+}
+.p-title{
+        font-family: $fonts;
+        font-size: $medium;
+        margin: 0;
+        margin-bottom: 20px;
+        color:$primary;
+}
+.justify{
+    text-align: justify;
+    line-height: 1.5;
+}
+.color{
+    color:$primary;
+    font-family: $fonts;
+}
+.btn{
+    display: inline-block;
+    letter-spacing: 1px;
+    padding:10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color:#fff;
+    background: $primary;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.txt-center{
+    text-align: center;
+}
+.green{
+    color:$primary;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.medium{
+    font-size: 1.5rem;
+}
+.btn:hover{
+    background: $footer1;
+    
+}
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.flex1{
+    display: flex;
+}
+.flex{
+    display: flex;
+    @include breakpoint-down(extra-small){
+        flex-wrap: wrap;  
+        justify-content: space-between !important;      
+    }
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+    &-gap{
+        gap:1em;
+        margin-bottom: 40px;
+    }
+    &-wrap{
+        flex-wrap: wrap;
+    }
+}
+
+.hide-mobile{
+@include breakpoint-down(medium){
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right:-800px;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    height:400px;
+    transition: .5s ease-in-out;
+    background: #fff;
+    color:#000;    
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+}
+.hide-desktop{
+@include breakpoint-up(medium){
+    display: none; 
+    opacity: 0;   
+}
+}

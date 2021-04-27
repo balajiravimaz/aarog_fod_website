@@ -1,0 +1,51 @@
+// About section
+
+.about{
+    width: 100%;    
+    h4{
+        font-size: 1.5rem;
+        margin:0;
+        margin-bottom: 5px;
+    }
+    .row{
+        &__img{
+            width:50%;
+            align-self: flex-end;
+            margin-right: 30px;
+            img{border-radius: 50% 0;}            
+        }
+        &__text{
+            width:45%;
+            p{
+                line-height: 1.4;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+// featured section
+
+.feature{
+    margin-top: 50px;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://res.cloudinary.com/djer1onlx/image/upload/v1618566892/tree_ez9hgh.jpg);
+    background-position: center;
+    background-size: cover;    
+    .row{
+        &__text{
+            width:50%;
+            color:#fff;
+            h2{
+                color:#fff;
+                text-align: left;
+            }
+            p{
+                margin-bottom: 40px;
+                line-height: 1.5;
+            }
+        }
+        &__img{
+            width:40%;
+        }
+    }
+}
